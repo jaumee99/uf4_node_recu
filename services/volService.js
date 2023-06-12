@@ -18,7 +18,7 @@ const createVol = (newVol) => {
         createdAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
     }
     try {
-        const vol = Vol.create(volToCreate);
+        const vol = Vol.createVol(volToCreate);
         return vol;
     } catch (error) {
         throw error;
@@ -27,8 +27,8 @@ const createVol = (newVol) => {
 
 const deleteVol = (id) => {
     try {
-        const vol = Vol.deleteVol(id);
-        return vol;
+        const volDeleted = Vol.deleteVol(id);
+        return volDeleted;
     } catch (error) {
         throw error;
     }

@@ -26,7 +26,7 @@ const createVol = (newVol) => {
 }
 
 const deleteVol = (id) => {
-    db.run("DELETE FROM vol WHERE id = ?", [id], function (err) {
+    db.run("DELETE FROM vol WHERE id = ?", [id], (err) => {
         if (err) {
             console.log(err);
         } else {

@@ -7,8 +7,8 @@ const getOneBitllet = async (req, res) => {
         res.send({ status: "OK", data: bitllet });
     } catch (error) {
         res
-            .status(error?.status || 500)
-            .send({ status: "FAILED", data: { error: error?.message || error } });
+            .status(error.status || 500)
+            .send({ status: "FAILED", data: { error: error.message || error } });
     }
 }
 
@@ -46,8 +46,8 @@ const createBitllet = (req, res) => {
         res.send({ status: "OK", data: bitllet });
     } catch (error) {
         res
-            .status(error?.status || 500)
-            .send({ status: "FAILED", data: { error: error?.message || error } });
+            .status(error.status || 500)
+            .send({ status: "FAILED", data: { error: error.message || error } });
     }
 };
 
@@ -77,8 +77,8 @@ const updateBitllet = async (req, res) => {
         res.send({ status: "OK", data: bitllet });
     } catch (error) {
         res
-            .status(error?.status || 500)
-            .send({ status: "FAILED", data: { error: error?.message || error } });
+            .status(error.status || 500)
+            .send({ status: "FAILED", data: { error: error.message || error } });
     }
 };
 
@@ -90,8 +90,8 @@ const deleteBitllet = async (req, res) => {
         res.send({ status: "OK", data: bitllet });
     } catch (error) {
         res
-            .status(error?.status || 500)
-            .send({ status: "FAILED", data: { error: error?.message || error } });
+            .status(error.status || 500)
+            .send({ status: "FAILED", data: { error: error.message || error } });
     }
 }
 
@@ -102,8 +102,8 @@ const getVolByBitlletId = async (req, res) => {
         res.send({ status: "OK", data: vol });
     } catch (error) {
         res
-            .status(error?.status || 500)
-            .send({ status: "FAILED", data: { error: error?.message || error } });
+            .status(error.status || 500)
+            .send({ status: "FAILED", data: { error: error.message || error } });
     }
 }
 

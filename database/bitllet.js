@@ -50,7 +50,7 @@ const deleteBitllet = (id) => {
 
 const getVolByBitlletId = (id) => {
     return new Promise((resolve, reject) => {
-        db.all("SELECT * FROM vol WHERE id = ?", [id], (err, rows) => {
+        db.all("SELECT * FROM bitllet WHERE volId = ?", [id], (err, rows) => {
             if (err) {
                 reject(err);
             }
